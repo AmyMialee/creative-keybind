@@ -36,7 +36,7 @@ public class CreativeKeybindClient implements ClientModInitializer {
                         } else {
                             gameMode2 = GameMode.CREATIVE;
                         }
-                        client.player.sendCommand("/gamemode " + gameMode2.getName());
+                        client.interactionManager.setGameMode(gameMode2);
                     } else {
                         client.player.sendMessage(Text.translatable("creativekeybind.denied").formatted(Formatting.RED), true);
                     }
